@@ -143,4 +143,5 @@ Na co będzie zwracał uwagę mentor podczas sprawdzania zadania:
 * Jeśli wprowadzisz dane do dowolnego elementu formularza po submicie, dane z poprzedniego formularza nie pojawią się w pamięci lokalnej.
 
 https://lukasz-sklad.github.io/goit-js-hw-09/
-https://github.com/lukasz-sklad/goit-js-hw-09
+
+https://github.com/lukasz-sklad/goit-js-hw-09/
