@@ -1,113 +1,145 @@
-# Vanilla App Template
+# goit-js-hw-09
+### Zadanie domowe nr 9
 
-Цей проект було створено за допомогою Vite. Для знайомства та налаштування
-додаткових можливостей [звернись до документації](https://vitejs.dev/).
+_Wow, jesteś już na module 9!_
 
-## Створення репозиторію за шаблоном
+_Podsumujmy nasze dotychczasowe wyniki. Ty już:_
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проекту. Для цього натисни на кнопку `«Use this template»` і
-обери опцію `«Create a new repository»`, як показано на зображенні.
+* rozumiesz specyfikę formatu JSON;
+* znasz i używasz metod obiektów JSON;
+* rozróżniasz pamięć lokalną i pamięć sesji;
+* zainstalował node.js i korzystał z NPM (node package manager);
+* rozumiesz pojęcie modularności kodu;
+* używasz składni ECMAScript Modules;
+* wiesz, jak instalować i odinstalowywać pakiety oraz używać ich w kodzie.
+_Czas poćwiczyć! Czeka Cię zadanie stworzenia galerii obrazów i zapisania danych formularza._
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
 
-На наступному етапі відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся, що репозиторій публічний, після чого натисни
-кнопку `«Create repository from template»`.
+__Zadanie domowe №9__
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+1. Utwórz repozytorium `goit-js-hw-09`
+2. Zbuduj swój projekt za pomocą [Vite](https://vitejs.dev/). Przygotowaliśmy dla Ciebie [gotową kompilację](https://github.com/goitacademy/vanilla-app-template) ze wszystkimi dodatkowymi ustawieniami projektu i zalecamy jej użycie.
+3. Przeczytaj zadanie i wykonaj je w edytorze kodu.
+4. Upewnij się, że kod jest formatowany za pomocą `Prettier`, i że nie ma żadnych błędów ani ostrzeżeń w konsoli po otwarciu żywej strony zadania.
+5. Przekaż pracę domową do sprawdzenia.
 
-Після того, як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+__Format przesyłania.__ Praca domowa zawiera dwa linki: do plików źródłowych oraz do strony roboczej na `GitHub Pages`.
 
-Проскроливши сторінку до самого кінця, в секції `«Workflow permissions»` обери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проекту.
+<pre>
+! Wykorzystaj ten <a href="https://www.figma.com/file/m8k9NQV7qZrtYDCvxfD68B/%D0%94%D0%97-JavaScript?type=design&amp;node-id=3-969&amp;mode=design" rel="noopener noreferrer" target="_blank">układ</a> do stylizacji własnego zadania.
+</pre>
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+Niech struktura folderów i plików projektu w folderze `src` wygląda następująco. Przykład podłączenia plików do index.html można zobaczyć w poprzednim zadaniu domowym.
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів та папок
-репозиторію-шаблону. Далі працюй з ним, як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби коміти та відправляй
-їх на GitHub.
+__Zadanie 1. Galeria obrazów__
 
-## Підготовка до роботи
+Wykonaj to zadanie w plikach `01-gallery.html` i `01-gallery.js`.
 
-1. Переконайся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проекту в терміналі командою `npm install`.
-3. Запусти режим розробки, виконавши в терміналі команду `npm run dev`.
-4. Перейдіть у браузері за адресою
-   [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
-   перезавантажуватись після збереження змін у файли проекту.
+W poprzednim zadaniu domowym utworzyłeś/aś galerię obrazów przy użyciu delegowania zdarzeń i dodałeś/aś okno modalne za pośrednictwem biblioteki CDN, aby wyświetlać pełnowymiarową wersję obrazu.
 
-## Файли і папки
 
-- Файли розмітки компонентів сторінки повинні лежати в папці `src/partials` та
-  імпортуватись до файлу `index.html`. Наприклад, файл з розміткою хедера
-  `header.html` створюємо у папці `partials` та імпортуємо в `index.html`.
-- Файли стилів повинні лежати в папці `src/css` та імпортуватись до HTML-файлів
-  сторінок. Наприклад, для `index.html` файл стилів називається `index.css`.
-- Зображення додавай до папки `src/img`. Збирач оптимізує їх, але тільки при
-  деплої продакшн версії проекту. Все це відбувається у хмарі, щоб не
-  навантажувати твій комп'ютер, тому що на слабких компʼютерах це може зайняти
-  багато часу.
+Tworzenie galerii jest codziennym zadaniem dla programistów, ale ręczne pisanie ich za każdym razem jest zbyt czasochłonne. W tym celu istnieją biblioteki, które implementują całą logikę galerii.
 
-## Деплой
 
-Продакшн версія проекту буде автоматично збиратися та деплоїтись на GitHub
-Pages, у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад,
-після прямого пуша або прийнятого пул-реквесту. Для цього необхідно у файлі
-`package.json` змінити значення прапора `--base=/<REPO>/`, для команди `build`,
-замінивши `<REPO>` на назву свого репозиторію, та відправити зміни на GitHub.
+Utwórz tę samą galerię, ale przy użyciu biblioteki [SimpleLightbox](https://simplelightbox.com/), która zajmie się kliknięciami obrazów, otwieraniem i zamykaniem okna modalnego oraz przewijaniem obrazów za pomocą klawiatury.
 
-```json
-"build": "vite build --base=/<REPO>/",
+
+Zwróć uwagę na następujące niuanse:
+
+* Nie trzeba już wdrażać delegowania zdarzeń, biblioteka [SimpleLightbox](https://simplelightbox.com/) sama będzie śledzić kliknięcia na kartach galerii.
+* Nie potrzebujesz już biblioteki do tworzenia okna modalnego, ta funkcjonalność jest wbudowana w bibliotece [SimpleLightbox](https://simplelightbox.com/).
+Wykonaj to zadanie w plikach `gallery.html` i `gallery.js`. Podziel to zadanie na kilka podzadań.
+
+Użyj kodu z poprzedniego zadania domowego i dokonaj jego refaktoryzacji. Nie musisz pisać wszystkiego od nowa. Na przykład, tworzenie elementów galerii pozostanie bez zmian. Ale kod delegujący i otwierający okno modalne powinien zostać usunięty.
+
+Aby zmienić nieco układ karty galerii, skorzystaj z tego szablonu.
+
+```html
+<li class="gallery-item">
+	<a class="gallery-link" href="large-image.jpg">
+		<img 
+			class="gallery-image" 
+			src="small-image.jpg" 
+			alt="Image description" 
+			/>
+	</a>
+</li>
 ```
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) та
-виставити роздачу продакшн версії файлів з папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+Dodaj bibliotekę [SimpleLightbox](https://simplelightbox.com/) jako zależność projektu za pomocą `npm`. Aby dołączyć kod CSS biblioteki do projektu, należy dodać kolejny import, oprócz tego opisanego w dokumentacji.
 
-### Статус деплою
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+```javascript
+// Opisany w dokumentacji
+import SimpleLightbox from "simplelightbox";
+// Opcjonalny import stylów
+import "simplelightbox/dist/simple-lightbox.min.css";
+```
 
-- **Жовтий колір** - виконується збірка та деплой проекту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, збірки чи деплою сталася помилка.
 
-Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
-вікні, що випадає, перейти за посиланням `Details`.
+Następnym krokiem jest inicjalizacja biblioteki po utworzeniu i dodaniu elementów galerii do `ul.gallery`. Aby to zrobić, przeczytaj dokumentację [SimpleLightbox](https://simplelightbox.com/), zwłaszcza sekcje „Usage” i „Markup”.
 
-![Deployment status](./assets/deploy-status.png)
 
-### Жива сторінка
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною на вкладці `Settings` > `Pages` в налаштуваннях репозиторію.
-Наприклад, ось посилання на живу версію для цього репозиторію
+Następnie zapoznaj się z dokumentacją w sekcji „Opcje” i dodaj wyświetlane podpisy do obrazów z atrybutu 'alt'. Niech podpis będzie na dole i pojawi się 250 milisekund po otwarciu okna modalnego.
 
-[https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
 
-Якщо відкриється порожня сторінка, переконайся, що у вкладці `Console` немає
-помилок пов'язаних з неправильними шляхами до CSS та JS файлів проекту
-(**404**). Швидше за все у тебе неправильне значення прапора `--base` для
-команди `build` у файлі `package.json`.
+Na co będzie zwracał uwagę mentor podczas sprawdzania zadania:
 
-## Як це працює
+* Na żywej stronie wyświetlana jest galeria obrazów ze zbioru danych `images`.
+* Galeria obrazów jest stylizowana zgodnie z układem.
+* Dane dla galerii są tworzone dynamicznie w JS.
+* Nie ma niestandardowych słuchaczy.
+Biblioteka SimpleLightbox jest podłączona za pomocą `npm`.
+Instancja biblioteki jest inicjowana po dodaniu elementów galerii do DOM i poza jakimikolwiek funkcjami.
+* Po kliknięciu elementu galerii otwiera się okno modalne podłączonej biblioteki, które zawiera powiększoną wersję klikniętego obrazu. Dostępne są wszystkie podstawowe funkcje biblioteki.
+* Po 250 milisekundach od otwarcia okna modalnego zawartość atrybutu `alt` pojawia się na dole jako podpis do obrazu.
 
-![How it works](./assets/how-it-works.png)
+__Zadanie 2. Formularz zwrotny__
 
-1. Після кожного пуша у гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) із файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується та
-   проходить лінтинг та збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проекту
-   відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
-   буде вказано в чому проблема.
+
+
+Wykonaj to zadanie w plikach `02-form.html` i `02-form.js`.
+
+Dodaj do HTML znaczniki formularza. W JS napisz skrypt, który będzie zapisywał wartości pól w pamięci lokalnej, gdy użytkownik coś wpisze.
+
+
+```html
+<form class="feedback-form" autocomplete="off">
+  <label>
+    Email
+    <input type="email" name="email" autofocus />
+  </label>
+  <label>
+    Message
+    <textarea name="message" rows="8"></textarea>
+  </label>
+  <button type="submit">Submit</button>
+</form>
+```
+
+
+Wykonaj to zadanie w plikach `feedback.html` i `feedback.js`.
+
+Podziel go na kilka podzadań:
+
+1. Korzystając z delegowania, śledź zdarzenie input w formularzu i za każdym razem zapisuj obiekt z polami `email` i `message` do pamięci lokalnej, w której przechowywane są bieżące wartości pól formularza. Niech kluczem dla magazynu będzie ciąg `„feedback-form-state”`.
+2. Po załadowaniu strony sprawdź stan pamięci, a jeśli są tam przechowywane dane, wypełnij nimi pola formularza. W przeciwnym razie pola powinny być puste.
+3. Podczas submitu formularza wyczyść pamięć formularza i pola, a następnie wyświetl w konsoli obiekt z polami `e-mail`, `message` i ich aktualnymi wartościami.
+
+
+Na co będzie zwracał uwagę mentor podczas sprawdzania zadania:
+
+* Na żywej stronie wyświetlany jest formularz z dwoma elementami formularza i przyciskiem typu `submit`.
+* Formularz jest stylizowany zgodnie z układem.
+* Formularz nasłuchuje zdarzeń `input` i `submit`.
+* Podczas wprowadzania danych do dowolnego elementu formularza, są one zapisywane do lokalnej pamięci pod kluczem `"feedback-form-state"`. Zapisane dane nie zawierają spacji wokół krawędzi.
+* Wprowadzanie danych w jednym polu formularza nie usuwa danych w pamięci dla innego pola.
+* Podczas odświeżania strony dane z pamięci lokalnej są zastępowane do elementów formularza. W polach formularza nie ma `undefined`.
+* Podczas submitu formularza sprawdzane jest, czy oba elementy formularza są wypełnione.
+* Podczas wysyłania formularza, jeśli oba elementy formularza są wypełnione, obiekt z polami `email`, `message` i ich aktualnymi wartościami jest wyświetlany w konsoli, a pamięć i pola formularza są czyszczone.
+* Jeśli wprowadzisz dane do dowolnego elementu formularza po submicie, dane z poprzedniego formularza nie pojawią się w pamięci lokalnej.
+
+https://lukasz-sklad.github.io/goit-js-hw-09/
